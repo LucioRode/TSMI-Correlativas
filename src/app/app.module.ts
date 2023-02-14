@@ -9,6 +9,8 @@ import { PrimerComponent } from './Componentes/primer/primer.component';
 import { SegundoComponent } from './Componentes/segundo/segundo.component';
 import { TerceroComponent } from './Componentes/tercero/tercero.component';
 import { PieComponent } from './Componentes/pie/pie.component';
+import { BotonesComponent } from './Componentes/botones/botones.component';
+import { MateriasComponent } from './Componentes/materias/materias.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,10 @@ import { PieComponent } from './Componentes/pie/pie.component';
     SegundoComponent,
     TerceroComponent,
     PieComponent,
+    BotonesComponent,
+    MateriasComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule

@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Russo+One&display=swap');
+
+html {
+    height: 100%;
+}
+
 body {
     background: #159957;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#footer {
+    margin-top: auto;
 }
 
 .wcien {
@@ -18,16 +34,29 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
+.fontButtons {
+    font-family: 'Russo One', sans-serif;
+    color: white;
+}
 
-.mayusculas{
+.mayusculas {
     text-transform: uppercase;
 }
 
-.semiFondo{
+.semiFondo {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.fondoNegro{
+.fondoIT {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movingFooter {
+    animation: normal;
+    animation-duration: 3s;
+}
+
+.fondoNegro {
     background-color: black;
 }
 
@@ -35,19 +64,53 @@ body {
     overflow: hidden;
 }
 
-.textWhite{
+.textWhite {
     color: white;
 }
 
-.dlr{
+.dlr {
     max-height: 20px;
 }
 
-.footerpadding{
+.footerpadding {
     padding-top: 10px;
 }
 
 a:link, a:visited, a:active {
     text-decoration:none;
     color: black;
+}
+
+.fotoLucio {
+    display: flex;
+    align-content: center;
+
+}
+
+.fotoMax {
+    width: auto;
+    height: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mostrar {
+    min-width: none;
+}
+
+nav {
+    align-content: center;
+    margin-left: auto;
+    margin-left: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    text-decoration: none;
+    padding: 10px 20px 15px;
 }
