@@ -10,6 +10,10 @@ body {
     background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.contenedor {
+    overflow: hidden;
+}
+
 .cuerpo {
     display: flex;
     flex-direction: column;
@@ -34,6 +38,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
+
 .fontButtons {
     font-family: 'Russo One', sans-serif;
     color: white;
@@ -51,21 +56,17 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.movingFooter {
-    animation: normal;
-    animation-duration: 3s;
-}
-
 .fondoNegro {
     background-color: black;
 }
 
-.contenedor {
-    overflow: hidden;
-}
-
 .textWhite {
     color: white;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: black;
 }
 
 .dlr {
@@ -74,11 +75,6 @@ body {
 
 .footerpadding {
     padding-top: 10px;
-}
-
-a:link, a:visited, a:active {
-    text-decoration:none;
-    color: black;
 }
 
 .fotoLucio {

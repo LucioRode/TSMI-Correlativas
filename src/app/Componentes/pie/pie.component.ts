@@ -1,4 +1,5 @@
 import { Component, OnInit,} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pie',
@@ -8,24 +9,15 @@ import { Component, OnInit,} from '@angular/core';
 
 
 export class PieComponent implements OnInit {
-  
-  validar: boolean;
 
-  constructor() {
-    this.validar = false;
+
+  constructor(private router : Router) {
   }
 
   ngOnInit(): void {
     }
 
-  activar(): void {
-    if(this.validar === false) {
-      this.validar = true;
-      location.hash = "#fin";
-    } else {
-      this.validar = false;
-    }
-
-    location.hash = "#fin";
+  dlr(): void {
+    this.router.navigate(['/dlr']);
   }
 }

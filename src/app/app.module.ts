@@ -11,6 +11,8 @@ import { TerceroComponent } from './Componentes/tercero/tercero.component';
 import { PieComponent } from './Componentes/pie/pie.component';
 import { BotonesComponent } from './Componentes/botones/botones.component';
 import { MateriasComponent } from './Componentes/materias/materias.component';
+import { DlrComponent } from './Componentes/dlr/dlr.component';
+import { EstadoComponent } from './Componentes/estado/estado.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { MateriasComponent } from './Componentes/materias/materias.component';
     PieComponent,
     BotonesComponent,
     MateriasComponent,
+    DlrComponent,
+    EstadoComponent,
   ],
 
   imports: [

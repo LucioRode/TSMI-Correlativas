@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-botones',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
+  }
+
+  info(): void {
+    this.router.navigate(['/info'])
+  }
+
+  materias(): void {
+    this.router.navigate(['/materias'])
+  }
+  
+  estado(): void {
+    this.router.navigate(['/estado'])
   }
 
 }

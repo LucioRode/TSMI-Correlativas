@@ -11,6 +11,8 @@ import { TerceroComponent } from './Componentes/tercero/tercero.component';
 import { PieComponent } from './Componentes/pie/pie.component';
 import { BannerComponent } from './Componentes/banner/banner.component';
 import { MateriasComponent } from './Componentes/materias/materias.component';
+import { DlrComponent } from './Componentes/dlr/dlr.component';
+import { EstadoComponent } from './Componentes/estado/estado.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/info', pathMatch: 'full'},
@@ -19,6 +21,8 @@ const routes: Routes = [
   { path: 'primero', component: PrimerComponent},
   { path: 'segundo', component: SegundoComponent},
   { path: 'tercero', component: TerceroComponent},
+  { path: 'estado', component: EstadoComponent},
+  { path: 'dlr', component: DlrComponent},
   { path: '**', redirectTo: '/info', pathMatch: 'full'},
 
 ];
