@@ -19,5 +19,10 @@ export class PieComponent implements OnInit {
 
   dlr(): void {
     this.router.navigate(['/dlr']);
+    
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 }

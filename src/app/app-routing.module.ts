@@ -15,7 +15,7 @@ import { DlrComponent } from './Componentes/dlr/dlr.component';
 import { EstadoComponent } from './Componentes/estado/estado.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/info', pathMatch: 'full'},
+  { path: '', redirectTo: 'info', pathMatch: 'full'},
   { path: 'info', component: InicioComponent},
   { path: 'materias', component: MateriasComponent},
   { path: 'primero', component: PrimerComponent},
@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'tercero', component: TerceroComponent},
   { path: 'estado', component: EstadoComponent},
   { path: 'dlr', component: DlrComponent},
-  { path: '**', redirectTo: '/info', pathMatch: 'full'},
+  { path: '**', redirectTo: 'info', pathMatch: 'full'},
 
 ];
 

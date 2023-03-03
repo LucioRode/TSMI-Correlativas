@@ -80,6 +80,7 @@ a:link, a:visited, a:active {
 .fotoLucio {
     display: flex;
     align-content: center;
+    margin-top: 30px;
 
 }
 
@@ -89,4 +90,25 @@ a:link, a:visited, a:active {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.imgRedes {
+    width: auto;
+    height: auto;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.m40px {
+    height: 40px;
+}
+
+.cardRedes {
+    margin-bottom: 15px;
+}
+
+.alignVert {
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: center;
 }

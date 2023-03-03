@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SCorrelativasService } from 'src/app/Services/servCorrelativas.service';
+import { CorrelativasService } from 'src/app/Services/servCorrelativas.service';
 
 @Component({
   selector: 'app-primer',
@@ -10,7 +10,7 @@ import { SCorrelativasService } from 'src/app/Services/servCorrelativas.service'
 export class PrimerComponent implements OnInit {
 
 
-  constructor(private _servCorrelativas : SCorrelativasService,
+  constructor(private _servCorrelativas : CorrelativasService,
               private router : Router) { }
 
   ngOnInit(): void {
