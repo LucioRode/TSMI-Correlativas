@@ -15,15 +15,15 @@ import { DlrComponent } from './Componentes/dlr/dlr.component';
 import { EstadoComponent } from './Componentes/estado/estado.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'info', pathMatch: 'full'},
-  { path: 'info', component: InicioComponent},
+/*  { path: '', redirectTo: '', pathMatch: 'full'}, */
+  { path: '', component: InicioComponent},
   { path: 'materias', component: MateriasComponent},
-  { path: 'primero', component: PrimerComponent},
-  { path: 'segundo', component: SegundoComponent},
-  { path: 'tercero', component: TerceroComponent},
+  { path: 'materias/primero', component: PrimerComponent},
+  { path: 'materias/segundo', component: SegundoComponent},
+  { path: 'materias/tercero', component: TerceroComponent},
   { path: 'estado', component: EstadoComponent},
   { path: 'dlr', component: DlrComponent},
-  { path: '**', redirectTo: 'info', pathMatch: 'full'},
+  { path: '**', redirectTo: '', pathMatch: 'full'},
 
 ];
 
