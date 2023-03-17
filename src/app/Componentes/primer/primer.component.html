@@ -2,63 +2,481 @@
     <div class="col-lg-8 offset-lg-2">
         <div class="card">
             <div class="card-body p-4">
-                
+
+                <!--  Primer renglon, nombre de la materia y boton de carga de notas-->
                 <div class="row">
-                    <div class="col-lg-9">
+                    <div class="col-7 col-lg-9">
                         <h4>Primer Año:</h4>
                     </div>
-    
-                    <div class="col-lg-3 align-self-end">
-                        <button class="btn btn-secondary btn-block al" type="submit">Ingresar Notas</button>
+                    
+                <!--  Boton carga de notas-->
+                    <div class="col-5 col-lg-3 align-self-end">
+                        <button (click)="habilitarCargarNota()" class="btn btn-secondary btn-block al mb-3" type="submit"> {{   textoBoton1   }} </button>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Comunicación</div>
-                    <div class="col-lg-2"><span class="badge bg-danger">Ingrese Nota 1 - 10</span></div>
-                    <div class="col-lg-2"><input type="number" class="form-control" min=1 max=10 value="0"></div>
-                    <div class="col-lg-1"><button (click)="sumar()" type="submit">Ok</button></div>
+                <!--   Materia Comunicacion-->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Comunicación</div>
+                        
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnp1" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ p1 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarP1()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetP1()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="cp1" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="p1" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaP1()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="sp1">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Unidad de Definicion Institucional I</div>
+                <!--   Fin Materia Comicación   -->
+
+                <!--   Materia Unidad de Definicion Institucional I   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Unidad de Definicion Institucional I</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnp2" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ p2 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarP2()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetP2()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="cp2" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="p2" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaP2()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="sp2">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Física</div>
+                <!--   Fin Materia Unidad de Definicion Institucional I   -->
+
+                <!--   Materia Física   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Física</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnp3" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ p3 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarP3()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetP3()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="cp3" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="p3" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaP3()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="sp3">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Matemáticas y Estadística</div>
+                <!--   Fin Materia Física   -->
+
+                <!--   Materia Matemáticas y Estadística   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Matemáticas y Estadística</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnp4" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ p4 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarP4()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetP4()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="cp4" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="p4" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaP4()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="sp4">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Química General e Industrial</div>
+                <!--   Fin Materia Matemáticas y Estadística   -->
+
+                <!--   Materia Química General e Industrial   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Química General e Industrial</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnp5" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ p5 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarP5()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetP5()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="cp5" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="p5" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaP5()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="sp5">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Informática</div>
+                <!--   Fin Materia Química General e Industrial   -->
+
+                <!--   Materia Informática   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Informática</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnp6" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ p6 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarP6()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetP6()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="cp6" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="p6" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaP6()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="sp6">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Gestión de las Organizaciones y de la Calidad</div>
+                <!--   Fin Materia Informática   -->
+
+                <!--   Materia Gestión de las Organizaciones y de la Calidad   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Gestión de las Organizaciones y de la Calidad</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnp7" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ p7 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarP7()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetP7()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="cp7" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="p7" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaP7()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="sp7">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Sistemas de Representación</div>
+                <!--   Fin Materia Gestión de las Organizaciones y de la Calidad   -->
+
+                <!--   Materia Sistemas de Representación   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Sistemas de Representación</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnp8" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ p8 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarP8()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetP8()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="cp8" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="p8" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaP8()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="sp8">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Mecánica</div>
+                <!--   Fin Materia Sistemas de Representación   -->
+
+                <!--   Materia Mecánica   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Mecánica</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnp9" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ p9 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarP9()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetP9()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="cp9" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="p9" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaP9()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="sp9">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Mantenimiento Industrial I</div>
+                <!--   Fin Materia Mecánica   -->
+
+                <!--   Materia Mantenimiento Industrial I   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Mantenimiento Industrial I</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnp10" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ p10 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarP10()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetP10()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="cp10" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="p10" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaP10()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="sp10">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Electrotecnia</div>
+                <!--   Fin Materia Mantenimiento Industrial I   -->
+
+                <!--   Materia Electrotecnia   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Electrotecnia</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnp11" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ p11 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarP11()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetP11()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="cp11" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="p11" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaP11()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="sp11">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!--   Fin Materia Electrotecnia   -->
+                
             </div>
         </div>    
     </div>

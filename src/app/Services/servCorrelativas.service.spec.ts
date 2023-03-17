@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SCorrelativasService } from './servCorrelativas.service';
+import { CorrelativasService } from './servCorrelativas.service';
 
 describe('SCorrelativasService', () => {
-  let service: SCorrelativasService;
+  let service: CorrelativasService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SCorrelativasService);
+    service = TestBed.inject(CorrelativasService);
   });
 
   it('should be created', () => {

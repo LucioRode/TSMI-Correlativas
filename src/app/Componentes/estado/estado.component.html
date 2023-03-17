@@ -11,7 +11,7 @@
                         <p>Cantidad de materias</p>
                     </div>
 
-                    <div class="col-lg-2"> {{  n_Materias  }} </div>
+                    <div class="col-lg-2"> {{  n_Materias | number: '2.0-1'  }} </div>
                 </div>
 
                 <hr>
@@ -21,7 +21,7 @@
                         <p>Cantidad de materias aprobadas</p>
                     </div>
 
-                    <div class="col-lg-2"> {{  c_Aprobadas  }} </div>
+                    <div class="col-lg-2"> {{  c_Aprobadas | number: '2.0-1'  }} </div>
                 </div>
 
                 <div class="row">
@@ -29,7 +29,7 @@
                         <p>Porcentaje</p>
                     </div>
 
-                    <div class="col-lg-2"> {{  promedio_A  }} %</div>
+                    <div class="col-lg-2"> {{  porc_A | number: '3.0-1'  }} %</div>
                 </div>
 
                 <hr>
@@ -39,7 +39,7 @@
                         <p>Cantidad de materias pendientes</p>
                     </div>
 
-                    <div class="col-lg-2"> {{  c_Pendientes  }} </div>
+                    <div class="col-lg-2"> {{  c_Pendientes | number: '2.0-1'  }} </div>
                 </div>
 
                 <div class="row">
@@ -47,7 +47,7 @@
                         <p>Porcentaje</p>
                     </div>
 
-                    <div class="col-lg-2"> {{  promedio_P  }} %</div>
+                    <div class="col-lg-2"> {{  porc_P | number: '3.0-1'  }} %</div>
                 </div>
 
                 <hr>
@@ -57,7 +57,7 @@
                         <p>Promedio</p>
                     </div>
 
-                    <div class="col-lg-2"> {{  promedio  }} %</div>
+                    <div class="col-lg-2"> {{  prom | number: '2.0-1'  }}</div>
                 </div>
 
             </div>

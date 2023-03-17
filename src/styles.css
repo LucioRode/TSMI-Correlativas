@@ -112,3 +112,12 @@ a:link, a:visited, a:active {
     margin-bottom: auto;
     align-self: center;
 }
+
+.cNotas {
+    width: 70px;
+    margin-right: 10px;
+}
+
+.lineDots {
+    border-bottom: 2px dotted rgb(230, 230, 230);
+}
