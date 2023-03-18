@@ -39,18 +39,7 @@ export class PrimerComponent implements OnInit {
   /*   Habilita la carga de datos   */
   textoBoton1 : string;
   statusBoton1 : boolean;
-  cn1 : boolean;
-  cn2 : boolean;
-  cn3 : boolean;
-  cn4 : boolean;
-  cn5 : boolean;
-  cn6 : boolean;
-  cn7 : boolean;
-  cn8 : boolean;
-  cn9 : boolean;
-  cn10 : boolean;
-  cn11 : boolean;
-
+  
   /*   Variables para mostrar las notas de cada materia   */
   cp1 : boolean;
   cp2 : boolean;
@@ -109,18 +98,7 @@ export class PrimerComponent implements OnInit {
     /*   Variable booleana de cargar notas   */
     this.textoBoton1 = "Ingresar Notas";
     this.statusBoton1 = false;
-    this.cn1 = false;
-    this.cn2 = false;
-    this.cn3 = false;
-    this.cn4 = false;
-    this.cn5 = false;
-    this.cn6 = false;
-    this.cn7 = false;
-    this.cn8 = false;
-    this.cn9 = false;
-    this.cn10 = false;
-    this.cn11 = false;
-
+   
     /*   Variable booleana de mostrar carga de notas   */
     this.cp1 = false;
     this.cp2 = false;

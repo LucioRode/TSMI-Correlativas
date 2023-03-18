@@ -51,6 +51,9 @@ prom : number;
 notas : number [];
 nl : number;
 
+//  chekear si esta recibido
+est : boolean;
+
 
   constructor() {
     /*   Vaiables con los valores de notas   */
@@ -99,6 +102,8 @@ nl : number;
     this.prom = 0;
 
     this.nl = 0;
+
+    this.est = false;
     
    }
 
@@ -153,6 +158,7 @@ nl : number;
     if (this.p11 >= 6) {
       this.notas.push(this.p11);
     }
+
   }
 
   //   Barrido de notas de Segundo año, guarda en array Notas las aprobadas
@@ -274,6 +280,16 @@ nl : number;
    this.calcPorcP();
    this.calcPendientes();
    this.calcPromedio();
+  }
+
+  resetEstado(): void {
+    this.est = false;
+    }
+
+  estado(): void {
+    if( this.c_Aprobadas == 29) {
+      this.est = true;
+    }
   }
 
 }

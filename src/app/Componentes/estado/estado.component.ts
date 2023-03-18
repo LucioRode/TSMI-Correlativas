@@ -8,16 +8,25 @@ import { CorrelativasService } from 'src/app/Services/servCorrelativas.service';
 })
 export class EstadoComponent implements OnInit {
 
-n_Materias = 0;
-c_Aprobadas = 0;
-c_Pendientes = 0;
-porc_A = 0;
-porc_P = 0;
-prom = 0;
+n_Materias : number;
+c_Aprobadas : number;
+c_Pendientes : number;
+porc_A : number;
+porc_P : number;
+prom : number;
+estado : boolean;
 
-  constructor(private _servCorrelativas : CorrelativasService) { }
+  constructor(private _servCorrelativas : CorrelativasService) {
+    this.n_Materias = 0;
+    this.c_Aprobadas = 0;
+    this.c_Pendientes = 0;
+    this.porc_A = 0;
+    this.porc_P = 0;
+    this.prom = 0;
+    this.estado = this._servCorrelativas.est;}
 
   ngOnInit(): void {
+    this._servCorrelativas.resetEstado();
     this.n_Materias = this._servCorrelativas.n_Materias;
     this._servCorrelativas.limpiarNotas();
     this._servCorrelativas.barridoNotasP();
@@ -29,6 +38,7 @@ prom = 0;
     this.porc_A = this._servCorrelativas.porc_A;
     this.porc_P = this._servCorrelativas.porc_P;
     this.prom = this._servCorrelativas.prom;
+    this._servCorrelativas.estado();
+    this.estado = this._servCorrelativas.est;
   }
-
 }

@@ -2,43 +2,405 @@
     <div class="col-lg-8 offset-lg-2">
         <div class="card">
             <div class="card-body p-4">
-                <h4>Tercer Año:</h4>
 
+                <!--  Primer renglon, nombre de la materia y boton de carga de notas-->
                 <div class="row">
-                    <div class="col-lg-7">Gestión de Seguridad, Salud Ocupacional y Medio Ambiente</div>
+                    <div class="col-7 col-lg-9">
+                        <h4>Tercer Año:</h4>
+                    </div>
+                    
+                <!--  Boton carga de notas-->
+                    <div class="col-5 col-lg-3 align-self-end">
+                        <button (click)="habilitarCargarNotaT()" class="btn btn-secondary btn-block al mb-3" type="submit"> {{   textoBoton3   }} </button>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Ética y Responsabilidad Social</div>
+                <!--   Materia Gestión de Seguridad, Salud Ocupacional y Medio Ambiente   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Gestión de Seguridad, Salud Ocupacional y Medio Ambiente</div>
+                        
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnt1" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ t1 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarT1()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetT1()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="ct1" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="t1" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaT1()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="st1">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Legislación Laboral</div>
+                <!--   Fin Materia Gestión de Seguridad, Salud Ocupacional y Medio Ambiente   -->
+
+                <!--   Materia Ética y Responsabilidad Social   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Ética y Responsabilidad Social</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnt2" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ t2 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarT2()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetT2()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="ct2" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="t2" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaT2()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="st2">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Tecnología del Frío y Calor</div>
+                <!--   Fin Materia Ética y Responsabilidad Social   -->
+
+                <!--   Materia Legislación Laboral   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Legislación Laboral</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnt3" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ t3 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarT3()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetT3()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="ct3" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="t3" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaT3()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="st3">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Mantenimiento Industrial III</div>
+                <!--   Fin Materia Legislación Laboral   -->
+
+                <!--   Materia Tecnología del Frío y Calor   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Tecnología del Frío y Calor</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnt4" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ t4 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarT4()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetT4()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="ct4" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="t4" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaT4()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="st4">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Automatización y Control</div>
+                <!--   Fin Materia Tecnología del Frío y Calor   -->
+
+                <!--   Materia Mantenimiento Industrial III   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Mantenimiento Industrial III</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnt5" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ t5 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarT5()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetT5()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="ct5" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="t5" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaT5()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="st5">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Abastecimiento, Costos y Control de Gestión del Mantenimiento</div>
+                <!--   Fin Materia Mantenimiento Industrial III   -->
+
+                <!--   Materia Automatización y Control   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Automatización y Control</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnt6" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ t6 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarT6()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetT6()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="ct6" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="t6" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaT6()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="st6">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Neumática e Hidráulica</div>
+                <!--   Fin Materia Automatización y Control   -->
+
+                <!--   Materia Abastecimiento, Costos y Control de Gestión del Mantenimiento   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Abastecimiento, Costos y Control de Gestión del Mantenimiento</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnt7" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ t7 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarT7()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetT7()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="ct7" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="t7" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaT7()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="st7">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7">Práctica Profesionalizante II</div>
+                <!--   Fin Materia Abastecimiento, Costos y Control de Gestión del Mantenimiento   -->
+
+                <!--   Materia Neumática e Hidráulica   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Neumática e Hidráulica</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnt8" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ t8 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarT8()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetT8()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="ct8" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="t8" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaT8()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="st8">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!--   Fin Materia Neumática e Hidráulica   -->
+
+                <!--   Materia Práctica Profesionalizante II   -->
+                <div class="row lineDots">
+                    <div class="col-8 col-lg-8">Práctica Profesionalizante II</div>
+                    
+                    <!--   Sección Mostrar Notas -->
+                    <div *ngIf="mnt9" class="col-4 col-lg-4 d-flex">
+                        <div class="row">
+                            <div class="col-4 col-lg-4">
+                                <span> {{ t9 | number: '2.0-0' }} </span>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="modificarT9()">M</button>
+                            </div>
+            
+                            <div class="col-4 col-lg-4">
+                                <button (click)="resetT9()">R</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--   Sección Cargar Notas -->
+                    <div class="col-4 col-lg-4">
+                        <div *ngIf="ct9" class="row">
+                            <div class="col-8 col-lg-6">
+                                <input type="number" [(ngModel)]="t9" class="form-control d-flex cNotas" min=0 max=10 value="0">
+                            </div>
+            
+                            <div class="col-4 col-lg-6">
+                                <button (click)="cargarNotaT9()" type="submit">Ok</button>
+                            </div>
+            
+                            <!--   Aviso de nota fuera de rango   -->
+                            <div *ngIf="st9">
+                                <span class="badge bg-danger">Ingrese Nota 1 - 10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--   Fin Práctica Profesionalizante II   -->
+
+                <!--   Aviso de Materias pendientes de Aprobar-->
+                
+                <div class="row" *ngIf="ems">
+                    <div class="col-8 col-lg-8">
+                        <span class="badge bg-danger"> {{   TMPP  }} </span>
+                    </div>
+                </div>
+                
             </div>
         </div>    
     </div>
