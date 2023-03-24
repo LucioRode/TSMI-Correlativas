@@ -21,6 +21,10 @@ export class BotonesComponent implements OnInit {
     this.router.navigate(['/materias'])
   }
   
+  horarios(): void {
+    this.router.navigate(['/horarios'])
+  }
+
   estado(): void {
     this.router.navigate(['/estado'])
   }

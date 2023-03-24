@@ -13,6 +13,7 @@ import { BannerComponent } from './Componentes/banner/banner.component';
 import { MateriasComponent } from './Componentes/materias/materias.component';
 import { DlrComponent } from './Componentes/dlr/dlr.component';
 import { EstadoComponent } from './Componentes/estado/estado.component';
+import { HorariosComponent } from './Componentes/horarios/horarios.component';
 
 const routes: Routes = [
 /*  { path: '', redirectTo: '', pathMatch: 'full'}, */
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'materias/primero', component: PrimerComponent},
   { path: 'materias/segundo', component: SegundoComponent},
   { path: 'materias/tercero', component: TerceroComponent},
+  { path: 'horarios', component: HorariosComponent},
   { path: 'estado', component: EstadoComponent},
   { path: 'dlr', component: DlrComponent},
   { path: '**', redirectTo: '', pathMatch: 'full'},

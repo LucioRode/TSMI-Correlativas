@@ -1,0 +1,63 @@
+<div class="row d-flex justify-content-between  animationFX">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card">
+            <div class="card-body p-4">
+                <!--   Botones   -->
+                <h2>Horarios</h2>
+                <div class="d-flex justify-content-between">
+                    <div class="row mx-auto">
+                        <div class="col-4">
+                            <button (click)="horarioPrimero()" class="m-3">Primero</button>
+                        </div>
+                        <div class="col-4">
+                            <button (click)="horarioSegundo()" class="m-3">Segundo</button>
+                        </div>
+                        <div class="col-4">
+                            <button (click)="horarioTercero()" class="m-3">Tercero</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!--   Seccion Horarios   -->
+                <!--   Primer Año   -->
+                <div *ngIf="hp" class="mx-auto animationFX">
+                    
+                    <div class="d-flex justify-content-between">
+                        <img  class="mx-auto wcien" src="./assets/img/horariosPrimero.png" alt="Horarios Primer Año">
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mt-2">
+                        <a href="./assets/pdf/horariosPrimero.pdf" download="Horarios Primer Año" class="mx-auto"><b>Descargar</b></a>
+                    </div>
+                                        
+                </div>
+
+                <!--   Segundo Año   -->
+                <div *ngIf="hs" class="mx-auto animationFX">
+                    
+                    <div class="d-flex justify-content-between">
+                        <img  class="mx-auto wcien" src="./assets/img/horariosSegundo.png" alt="Horarios Segundo Año">
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mt-2">
+                        <a href="./assets/pdf/horariosSegundo.pdf" download="Horarios Segundo Año" class="mx-auto"><b>Descargar</b></a>
+                    </div>
+                                        
+                </div>
+                <!--   Primer Año   -->
+                <div *ngIf="ht" class="mx-auto animationFX">
+                    
+                    <div class="d-flex justify-content-between mt-2">
+                        <img  class="mx-auto wcien" src="./assets/img/horariosTercero.png" alt="Horarios Tercer Año">
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <a href="./assets/pdf/horariosTercero.pdf" download="Horarios Tercer Año" class="mx-auto"><b>Descargar</b></a>
+                    </div>
+                                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

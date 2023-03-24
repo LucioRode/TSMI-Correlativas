@@ -255,34 +255,34 @@ export class TerceroComponent implements OnInit {
 
 //   Chequeo materia: Práctica Profesionalizante II
     if ( this.pp1 >= 6 && this.innovacion >= 6 ) {
-      this.ct4 = true;
+      this.ct9 = true;
       this.bcct = this.bcct + 1 ;
     } else {
-      this.ct4 = false;
+      this.ct9 = false;
     }
     
     //   Chequeo materia: Tecnología del Frío y Calor
     if ( this.elect > 6 ) {
-      this.ct5 = true;
+      this.ct4 = true;
       this.bcct = this.bcct + 1;
     } else {
-      this.ct5 = false;
+      this.ct4 = false;
     }
     
     //   Chequeo materia: Mantenimiento Industrial III
     if ( this.mantInd2 >= 6 ) {
-      this.ct6 = true;
+      this.ct5 = true;
       this.bcct = this.bcct + 1 ;
     } else {
-      this.ct6 = false;
+      this.ct5 = false;
     }
     
     //   Chequeo materia: Automatización y Control
     if ( this.elemMM >= 6  ) {
-      this.ct7 = true;
+      this.ct6 = true;
       this.bcct = this.bcct + 1 ;
     } else {
-      this.ct7 = false;
+      this.ct6 = false;
     }
     
     // Lanza Alerta

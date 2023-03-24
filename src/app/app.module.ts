@@ -17,6 +17,7 @@ import { BotonesComponent } from './Componentes/botones/botones.component';
 import { MateriasComponent } from './Componentes/materias/materias.component';
 import { DlrComponent } from './Componentes/dlr/dlr.component';
 import { EstadoComponent } from './Componentes/estado/estado.component';
+import { HorariosComponent } from './Componentes/horarios/horarios.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { EstadoComponent } from './Componentes/estado/estado.component';
     MateriasComponent,
     DlrComponent,
     EstadoComponent,
+    HorariosComponent,
   ],
 
   imports: [

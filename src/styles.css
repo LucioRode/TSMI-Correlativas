@@ -44,6 +44,10 @@ body {
     color: white;
 }
 
+.btnSize {
+    width: 100px;
+}
+
 .mayusculas {
     text-transform: uppercase;
 }
@@ -87,7 +91,7 @@ a:link, a:visited, a:active {
 .fotoMax {
     width: auto;
     height: 100%;
-    max-width: 400px;
+    max-height: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -121,3 +125,13 @@ a:link, a:visited, a:active {
 .lineDots {
     border-bottom: 2px dotted rgb(230, 230, 230);
 }
+
+.animationFX {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
