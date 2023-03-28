@@ -143,7 +143,18 @@
 
                 <!--   Materia Elementos de Máquinas y Mecanismos   -->
                 <div class="row lineDots">
-                    <div class="col-8 col-lg-8">Elementos de Máquinas y Mecanismos</div>
+                    <div class="col-8 col-lg-8 d-flex">
+                        <div>Elementos de Máquinas y Mecanismos</div>
+                        <div *ngIf="fisicab" class="m-l-10">
+                            <span class="badge bg-danger">Física</span>
+                        </div>
+                        <div *ngIf="mecab" class="m-l-10">
+                            <span class="badge bg-danger">Mecánica</span>
+                        </div>
+                        <div *ngIf="mateb" class="m-l-10">
+                            <span class="badge bg-danger">Matemáticas y Estadística</span>
+                        </div>
+                    </div>
                     
                     <!--   Sección Mostrar Notas -->
                     <div *ngIf="mns4" class="col-4 col-lg-4 d-flex">
@@ -185,7 +196,12 @@
 
                 <!--   Materia Tecnologías de los Materiales   -->
                 <div class="row lineDots">
-                    <div class="col-8 col-lg-8">Tecnologías de los Materiales</div>
+                    <div class="col-8 col-lg-8 d-flex">
+                        <div>Tecnologías de los Materiales</div>
+                        <div *ngIf="quimikb" class="m-l-10">
+                            <span class="badge bg-danger">Química General e Industrial</span>
+                        </div>
+                    </div>
                     
                     <!--   Sección Mostrar Notas -->
                     <div *ngIf="mns5" class="col-4 col-lg-4 d-flex">
@@ -227,7 +243,18 @@
 
                 <!--   Materia Mantenimiento Industrial II   -->
                 <div class="row lineDots">
-                    <div class="col-8 col-lg-8">Mantenimiento Industrial II</div>
+                    <div class="col-8 col-lg-8 d-flex">
+                        <div>Mantenimiento Industrial II</div>
+                        <div *ngIf="mantIndb" class="m-l-10">
+                            <span class="badge bg-danger">Mantenimiento Industrial I</span>
+                        </div>
+                        <div *ngIf="mecab" class="m-l-10">
+                            <span class="badge bg-danger">Mecánica</span>
+                        </div>
+                        <div *ngIf="electb" class="m-l-10">
+                            <span class="badge bg-danger">Electrotecnia</span>
+                        </div>
+                    </div>
                     
                     <!--   Sección Mostrar Notas -->
                     <div *ngIf="mns6" class="col-4 col-lg-4 d-flex">
@@ -269,7 +296,15 @@
 
                 <!--   Materia Instalaciones y Máquinas Eléctricas   -->
                 <div class="row lineDots">
-                    <div class="col-8 col-lg-8">Instalaciones y Máquinas Eléctricas</div>
+                    <div class="col-8 col-lg-8 d-flex">
+                        <div>Instalaciones y Máquinas Eléctricas</div>
+                        <div *ngIf="mateb" class="m-l-10">
+                            <span class="badge bg-danger">Matemáticas y Estadística</span>
+                        </div>
+                        <div *ngIf="electb" class="m-l-10">
+                            <span class="badge bg-danger">Electrotecnia</span>
+                        </div>
+                    </div>
                     
                     <!--   Sección Mostrar Notas -->
                     <div *ngIf="mns7" class="col-4 col-lg-4 d-flex">

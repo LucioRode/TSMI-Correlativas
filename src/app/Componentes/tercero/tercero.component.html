@@ -143,7 +143,12 @@
 
                 <!--   Materia Tecnología del Frío y Calor   -->
                 <div class="row lineDots">
-                    <div class="col-8 col-lg-8">Tecnología del Frío y Calor</div>
+                    <div class="col-8 col-lg-8 d-flex">
+                        <div>Tecnología del Frío y Calor</div>
+                        <div *ngIf="electb" class="m-l-10">
+                            <span class="badge bg-danger">Electrotecnia</span>
+                        </div>
+                    </div>
                     
                     <!--   Sección Mostrar Notas -->
                     <div *ngIf="mnt4" class="col-4 col-lg-4 d-flex">
@@ -185,7 +190,12 @@
 
                 <!--   Materia Mantenimiento Industrial III   -->
                 <div class="row lineDots">
-                    <div class="col-8 col-lg-8">Mantenimiento Industrial III</div>
+                    <div class="col-8 col-lg-8 d-flex">
+                        <div>Mantenimiento Industrial III</div>
+                        <div *ngIf="mantInd2b" class="m-l-10">
+                            <span class="badge bg-danger">Mantenimiento Industrial II</span>
+                        </div>
+                    </div>
                     
                     <!--   Sección Mostrar Notas -->
                     <div *ngIf="mnt5" class="col-4 col-lg-4 d-flex">
@@ -227,7 +237,12 @@
 
                 <!--   Materia Automatización y Control   -->
                 <div class="row lineDots">
-                    <div class="col-8 col-lg-8">Automatización y Control</div>
+                    <div class="col-8 col-lg-8 d-flex">
+                        <div>Automatización y Control</div>
+                        <div *ngIf="elemMMb" class="m-l-10">
+                            <span class="badge bg-danger">Elementos de Máquinas y Mecanismos</span>
+                        </div>
+                    </div>
                     
                     <!--   Sección Mostrar Notas -->
                     <div *ngIf="mnt6" class="col-4 col-lg-4 d-flex">
@@ -353,7 +368,15 @@
 
                 <!--   Materia Práctica Profesionalizante II   -->
                 <div class="row lineDots">
-                    <div class="col-8 col-lg-8">Práctica Profesionalizante II</div>
+                    <div class="col-8 col-lg-8 d-flex">
+                        <div>Práctica Profesionalizante II</div>
+                        <div *ngIf="pp1b" class="m-l-10">
+                            <span class="badge bg-danger">Práctica Profesionalizante I</span>
+                        </div>
+                        <div *ngIf="innovacionb" class="m-l-10">
+                            <span class="badge bg-danger">Innovación y Desarrollo Emprendedor</span>
+                        </div>
+                    </div>
                     
                     <!--   Sección Mostrar Notas -->
                     <div *ngIf="mnt9" class="col-4 col-lg-4 d-flex">

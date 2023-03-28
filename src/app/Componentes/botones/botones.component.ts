@@ -29,4 +29,8 @@ export class BotonesComponent implements OnInit {
     this.router.navigate(['/estado'])
   }
 
+  login(): void {
+    this.router.navigate(['/login'])
+  }
+
 }

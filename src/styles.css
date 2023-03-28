@@ -126,6 +126,15 @@ a:link, a:visited, a:active {
     border-bottom: 2px dotted rgb(230, 230, 230);
 }
 
+.m-l-10 {
+    margin-left: 10px;
+}
+
+.textNoJump {
+    block-size: auto;
+    text-overflow: clip;
+}
+
 .animationFX {
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
   }

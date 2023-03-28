@@ -69,6 +69,13 @@ export class SegundoComponent implements OnInit {
   emp : boolean;
   TMPP : string;
   bccs : number;
+  electb : boolean;
+  fisicab : boolean;
+  mantIndb : boolean;
+  mateb : boolean;
+  mecab : boolean;
+  quimikb : boolean;
+
 
   constructor(private _servCorrelativas : CorrelativasService, private router : Router) {
     
@@ -133,6 +140,13 @@ export class SegundoComponent implements OnInit {
     this.emp = false;
     this.TMPP = "Se registran materias pendientes de Aprobar";
     this.bccs = 0;
+    this.electb = false;
+    this.fisicab = false;
+    this.mantIndb = false;
+    this.mateb = false;
+    this.mecab = false;
+    this.quimikb = false;
+ 
   }
 
   ngOnInit(): void {
@@ -245,6 +259,12 @@ export class SegundoComponent implements OnInit {
   resetCheckCorrelativas(): void {
     this.bccs = 0;
     this.emp = false;
+    this.electb = false;
+    this.fisicab = false;
+    this.mantIndb = false;
+    this.mateb = false;
+    this.mecab = false;
+    this.quimikb = false;
   }
 
 
@@ -288,6 +308,32 @@ export class SegundoComponent implements OnInit {
       this.bccs = this.bccs + 1 ;
     } else {
       this.cs7 = false;
+    }
+    
+    //    Aviso de materia pendiente
+    if (this.elect < 6) {
+      this.electb = true;
+    }
+
+    if (this.fisica < 6) {
+      this.fisicab = true;
+    }
+
+    if (this.mantInd < 6) {
+      this.mantIndb = true;
+    }
+
+    if (this.mate < 6) {
+      this.mateb = true;
+    }
+
+    if (this.meca < 6) {
+      this.mecab = true;
+    }
+    
+
+    if (this.quimik < 6) {
+      this.quimikb = true;
     }
     
     // Lanza Alerta

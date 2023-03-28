@@ -68,6 +68,11 @@ export class TerceroComponent implements OnInit {
   ems : boolean;
   TMPP : string;
   bcct : number;
+  electb : boolean;
+  elemMMb : boolean;
+  mantInd2b : boolean;
+  pp1b : boolean;
+  innovacionb : boolean;
 
   constructor(private _servCorrelativas : CorrelativasService, private router : Router) {
     
@@ -130,6 +135,11 @@ export class TerceroComponent implements OnInit {
   this.ems = false;
   this.TMPP = "Se registran materias pendientes de Aprobar";
   this.bcct = 0;
+  this.electb = false;
+  this.elemMMb = false;
+  this.mantInd2b = false;
+  this.pp1b = false;
+  this.innovacionb = false;
   }
 
   ngOnInit(): void {
@@ -241,6 +251,11 @@ export class TerceroComponent implements OnInit {
   resetCheckCorrelativas(): void {
     this.bcct = 0;
     this.ems = false;
+    this.electb = false;
+    this.elemMMb = false;
+    this.mantInd2b = false;
+    this.pp1b = false;
+    this.innovacionb = false;
   }
 
 
@@ -284,6 +299,28 @@ export class TerceroComponent implements OnInit {
     } else {
       this.ct6 = false;
     }
+
+    //    Aviso de materia pendiente
+    if (this.elect < 6) {
+      this.electb = true;
+    }
+
+    if (this.elemMM < 6) {
+      this.elemMMb = true;
+    }
+
+    if (this.mantInd2 < 6) {
+      this.mantInd2b = true;
+    }
+
+    if (this.pp1 < 6) {
+      this.pp1b = true;
+    }
+
+    if (this.innovacion < 6) {
+      this.innovacionb = true;
+    }
+    
     
     // Lanza Alerta
     if (this.bcct < 4 ) {

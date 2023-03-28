@@ -14,6 +14,7 @@ import { MateriasComponent } from './Componentes/materias/materias.component';
 import { DlrComponent } from './Componentes/dlr/dlr.component';
 import { EstadoComponent } from './Componentes/estado/estado.component';
 import { HorariosComponent } from './Componentes/horarios/horarios.component';
+import { LoginComponent } from './Componentes/login/login.component';
 
 const routes: Routes = [
 /*  { path: '', redirectTo: '', pathMatch: 'full'}, */
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'horarios', component: HorariosComponent},
   { path: 'estado', component: EstadoComponent},
   { path: 'dlr', component: DlrComponent},
+  { path: 'login', component: LoginComponent},
   { path: '**', redirectTo: '', pathMatch: 'full'},
 
 ];
