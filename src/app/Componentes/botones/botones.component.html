@@ -1,37 +1,10 @@
-<div class="row">
-    <div class="col-8 mx-auto">
-        <div class="row fontButtons d-flex justify-content-between">
-
-            <div class="col-2">
-                <button type="button" class="btn btn-outline-primary textWhite btnSize mx-auto" (click)="info()">
-                    Info
-                </button>
-            </div>
-
-            <div class="col-2">
-                <button type="button" class="btn btn-outline-primary textWhite btnSize mx-auto" (click)="materias()">
-                    Materias
-                </button>
-            </div>
-
-            <div class="col-2">
-                <button type="button" class="btn btn-outline-primary textWhite btnSize mx-auto" (click)="horarios()">
-                    Horarios
-                </button>
-            </div>
-
-            <div class="col-2">
-                <button type="button" class="btn btn-outline-primary textWhite btnSize mx-auto" (click)="estado()">
-                    Estado
-                </button>
-            </div>
-
-            <div class="col-2">
-                <button type="button" class="btn btn-outline-primary textWhite btnSize mx-auto" (click)="login()">
-                    Login
-                </button>
-            </div>
-
-        </div>
-    </div>
+<div class="container max20px">
+    <nav class="text-center">
+        <ul class="navbar navbar-bar mx-auto d-flex sombra">
+            <li class="btnPadding textWhite mx-auto" (click)="info()">INFO</li>
+            <li class="btnPadding textWhite mx-auto" (click)="materias()">MATERIAS</li>
+            <li class="btnPadding textWhite mx-auto" (click)="horarios()">HORARIOS</li>
+            <li class="btnPadding textWhite mx-auto" (click)="estado()">ESTADO</li>
+        </ul>
+    </nav>
 </div>

@@ -10,6 +10,24 @@ body {
     background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+ul{
+    list-style: none;
+    cursor: pointer;
+}
+
+.sombra :hover {
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 17, 255, 0.3);
+    border-radius: 10px;
+}
+
+.sombra :active {
+    box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.3);
+    background-color: rgba(104, 113, 235, 0.3);
+    border: solid 2px white;
+    border-radius: 10px;
+}
+
 .contenedor {
     overflow: hidden;
 }
@@ -42,10 +60,6 @@ body {
 .fontButtons {
     font-family: 'Russo One', sans-serif;
     color: white;
-}
-
-.btnSize {
-    width: 100px;
 }
 
 .mayusculas {
@@ -135,9 +149,20 @@ a:link, a:visited, a:active {
     text-overflow: clip;
 }
 
+
+
+.btnPadding {
+    padding: 5px 10px;
+}
+
+.max20px {
+    max-height: 30px;
+}
+
 .animationFX {
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
-  }
+}
+
   
   /* Go from zero to full opacity */
   @keyframes fadeEffect {
